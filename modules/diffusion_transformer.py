@@ -2,10 +2,10 @@ import torch
 from torch import nn
 import math
 
-from modules.gpt_fast.model import ModelArgs, Transformer
+from .gpt_fast.model import ModelArgs, Transformer
 # from modules.torchscript_modules.gpt_fast_model import ModelArgs, Transformer
-from modules.wavenet import WN
-from modules.commons import sequence_mask
+from .wavenet import WN
+from .commons import sequence_mask
 
 from torch.nn.utils import weight_norm
 

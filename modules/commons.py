@@ -376,8 +376,8 @@ def normalize_f0(f0_sequence):
 
 def build_model(args, stage="DiT"):
     if stage == "DiT":
-        from modules.flow_matching import CFM
-        from modules.length_regulator import InterpolateRegulator
+        from .flow_matching import CFM
+        from .length_regulator import InterpolateRegulator
 
         length_regulator = InterpolateRegulator(
             channels=args.length_regulator.channels,
@@ -398,7 +398,7 @@ def build_model(args, stage="DiT"):
         )
     elif stage == 'codec':
         from dac.model.dac import Encoder
-        from modules.quantize import (
+        from .quantize import (
             FAquantizer,
         )
 
